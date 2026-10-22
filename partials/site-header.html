@@ -1,0 +1,26 @@
+<header class="site-header">
+    <a class="{{brand_class}}" href="index.html" aria-label="Invisible Tech home">
+        <span class="brand-mark"><img src="assets/branding/icon_top.avif" alt=""></span>
+    </a>
+    <nav {{nav_attributes}}>
+        <div class="product-menu">
+            <button class="product-menu-trigger" id="productMenuTrigger" type="button" aria-expanded="false" aria-controls="productMenuPanel"><span {{product_label_attributes}}>Product</span></button>
+            <div class="product-menu-panel" id="productMenuPanel" hidden>
+                <p class="product-menu-kicker" {{menu_kicker_attributes}}>PRODUCT SERIES</p><h2 {{menu_series_attributes}}>Sleeping Wellness</h2>
+                <a href="eye-mask.html" {{menu_eye_mask_attributes}}>Eye Mask <span aria-hidden="true">↗</span></a>
+                <a href="travel-pillow.html" {{menu_travel_pillow_attributes}}>Travel Pillow <span aria-hidden="true">↗</span></a>
+                <a href="sleep-pillow.html" {{menu_sleep_pillow_attributes}}>Sleep Pillow <span aria-hidden="true">↗</span></a>
+                <p class="product-menu-coming" {{menu_coming_attributes}}>More comfort, coming soon.</p>
+            </div>
+        </div>
+        <a href="synap-flow.html" {{synap_link_attributes}}>SyNap Flow</a>
+        <a href="about.html" {{about_link_attributes}}>About us</a>
+    </nav>
+    <div class="header-actions">
+        <button class="bag-button" type="button" data-bag-open aria-label="Open shopping bag">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+            <span class="bag-count" data-bag-count hidden>0</span>
+        </button>
+        <button class="language-toggle" type="button" {{language_id}} aria-label="{{language_aria}}" aria-pressed="false">中文</button>
+    </div>
+</header>

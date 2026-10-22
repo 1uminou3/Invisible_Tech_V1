@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" role="img" aria-labelledby="title">
+  <title id="title">Sleep pillow product preview in slate</title>
+  <defs>
+    <linearGradient id="fabric" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d3d9db"/><stop offset=".56" stop-color="#afb9bd"/><stop offset="1" stop-color="#8a969c"/></linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#566167" stop-opacity=".17"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <ellipse cx="405" cy="466" rx="236" ry="36" fill="#3f4a4f" opacity=".15" filter="url(#shadow)"/>
+  <path d="M168 188c0-43 35-77 78-77h308c43 0 78 34 78 77l19 190c4 47-32 86-79 86H228c-47 0-83-39-79-86l19-190Z" fill="url(#fabric)" stroke="#8b979c" stroke-width="5"/>
+  <path d="M190 190c0-29 24-53 53-53h392c29 0 53 24 53 53l15 186c3 30-20 55-50 55H225c-30 0-53-25-50-55l15-186Z" fill="url(#shade)"/>
+  <path d="M223 168h354c30 0 54 22 57 51M204 377c-2 25 17 45 42 45h311" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="8" stroke-linecap="round"/>
+  <path d="M389 171c-20 56-19 160 3 230" fill="none" stroke="#68757a" stroke-opacity=".16" stroke-width="3"/>
+</svg>

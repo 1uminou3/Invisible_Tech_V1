@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#12345a">
+    <meta name="description" content="Choose a color and quantity for your Invisible Tech product, then check out securely with Stripe.">
+    <title>Choose your product | Invisible Tech</title>
+    <link rel="stylesheet" href="css/site-header.css">
+    <link rel="stylesheet" href="css/purchase.css">
+</head>
+<body>
+    <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Invisible Tech home">
+        <span class="brand-mark"><img src="assets/branding/icon_top.avif" alt=""></span>
+    </a>
+    <nav aria-label="Main navigation">
+        <div class="product-menu">
+            <button class="product-menu-trigger" id="productMenuTrigger" type="button" aria-expanded="false" aria-controls="productMenuPanel"><span data-purchase-text="navProducts">Product</span></button>
+            <div class="product-menu-panel" id="productMenuPanel" hidden>
+                <p class="product-menu-kicker" data-purchase-text="menuKicker">PRODUCT SERIES</p><h2 data-purchase-text="menuSeries">Sleeping Wellness</h2>
+                <a href="eye-mask.html" data-purchase-text="menuEyeMask">Eye Mask <span aria-hidden="true">↗</span></a>
+                <a href="travel-pillow.html" data-purchase-text="menuTravelPillow">Travel Pillow <span aria-hidden="true">↗</span></a>
+                <a href="sleep-pillow.html" data-purchase-text="menuSleepPillow">Sleep Pillow <span aria-hidden="true">↗</span></a>
+                <p class="product-menu-coming" data-purchase-text="menuComing">More comfort, coming soon.</p>
+            </div>
+        </div>
+        <a href="synap-flow.html" >SyNap Flow</a>
+        <a href="about.html" data-purchase-text="navAbout">About us</a>
+    </nav>
+    <div class="header-actions">
+        <button class="bag-button" type="button" data-bag-open aria-label="Open shopping bag">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+            <span class="bag-count" data-bag-count hidden>0</span>
+        </button>
+        <button class="language-toggle" type="button" id="purchaseLanguageToggle" aria-label="Language options" aria-pressed="false">中文</button>
+    </div>
+</header>
+
+    <main class="purchase-main">
+        <a class="purchase-back" href="index.html#products"><span aria-hidden="true">←</span> <span data-purchase-text="back">Back to the collection</span></a>
+        <section class="purchase-error checkout-result" id="checkoutResult" aria-live="polite" hidden>
+            <h1 id="checkoutResultTitle"></h1>
+            <p id="checkoutResultCopy"></p>
+            <button class="purchase-add checkout-return" id="returnToBag" type="button" data-bag-open hidden></button>
+            <a href="index.html#products"><span data-purchase-text="explore">Explore the collection</span> <span aria-hidden="true">↗</span></a>
+        </section>
+        <div class="purchase-error" id="purchaseError" role="alert" hidden>
+            <h1 data-purchase-text="errorTitle">That product isn’t available here.</h1>
+            <p data-purchase-text="errorCopy">Please return to the collection and choose a product to continue.</p>
+            <a href="index.html#products"><span data-purchase-text="explore">Explore the collection</span> <span aria-hidden="true">↗</span></a>
+        </div>
+        <section class="purchase-layout" id="purchaseLayout" aria-labelledby="purchaseTitle">
+            <div class="purchase-art">
+                <div class="purchase-orbit purchase-orbit-one" aria-hidden="true"></div>
+                <div class="purchase-orbit purchase-orbit-two" aria-hidden="true"></div>
+                <span class="purchase-art-index" data-purchase-text="artIndex">INVISIBLE TECH · OBJECT STUDY 01</span>
+                <img id="purchaseImage" src="" alt="">
+                <span class="purchase-art-color" id="purchaseColorLabel" aria-hidden="true"></span>
+            </div>
+            <div class="purchase-details">
+                <p class="purchase-eyebrow" data-purchase-text="eyebrow">A THOUGHTFUL CHOICE</p>
+                <h1 id="purchaseTitle">Choose your product</h1>
+                <p class="purchase-price" id="purchasePrice"></p>
+                <p class="purchase-description" data-purchase-text="description">Find the finish that feels like yours, then choose how many to add to your bag.</p>
+                <div class="purchase-color-block">
+                    <p class="purchase-label"><span data-purchase-text="colorLabel">COLOR</span> <span id="purchaseColorName"></span></p>
+                    <div class="purchase-colors" id="purchaseColors" role="group" aria-label="Choose a color"></div>
+                </div>
+                <div class="purchase-quantity">
+                    <label class="purchase-label" for="purchaseQuantity" data-purchase-text="quantityLabel">QUANTITY</label>
+                    <div class="quantity-stepper">
+                        <button type="button" id="quantityDecrease" aria-label="Decrease quantity" data-purchase-aria="decrease">−</button>
+                        <input id="purchaseQuantity" type="number" min="1" max="99" value="1" inputmode="numeric">
+                        <button type="button" id="quantityIncrease" aria-label="Increase quantity" data-purchase-aria="increase">+</button>
+                    </div>
+                </div>
+                <div class="purchase-total"><span data-purchase-text="subtotal">Estimated subtotal</span><strong id="purchaseTotal"></strong></div>
+                <button class="purchase-add" id="addToBag" type="button"><span data-purchase-text="addToBag">Add to bag</span> <span aria-hidden="true">↗</span></button>
+                <p class="purchase-demo-note" data-purchase-text="demoNote">Secure payment is handled by Stripe. Shipping address and phone number are collected at checkout.</p>
+            </div>
+        </section>
+        <section class="purchase-afterword" aria-label="Shopping details" data-purchase-aria="shoppingDetails">
+            <span data-purchase-text="stepOne">01 — CHOOSE A COLOR</span><span data-purchase-text="stepTwo">02 — FIND YOUR QUANTITY</span><span data-purchase-text="stepThree">03 — REVIEW YOUR BAG</span>
+        </section>
+    </main>
+    <script src="js/site-language.js"></script>
+    <script src="js/site-config.js"></script>
+    <script src="js/site-commerce.js"></script>
+    <script src="js/purchase.js"></script>
+</body>
+</html>
